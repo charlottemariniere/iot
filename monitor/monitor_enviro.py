@@ -1,15 +1,17 @@
-import random
-import logging
-import current as current
+from datetime import datetime
+from time import sleep
 
-import self as self
-
-from flask import Flask, render_template, jsonify
-from flask_cors import CORS
-from sqlalchemy import create_engine, select
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from db import CPU, Storage, Base
 
-from db import CPU, Base, EnvironmentTPH
+from mypi import \
+    get_serial, get_mac, get_host_name, \
+    get_cpu_temp, get_gpu_temp, get_maximum_cpu_load
+
+import sqlite3
+from db import EnvironmentTPH, Base
+import mypi
 
 db_filename = './data/monitor_data.db'
 app = Flask(__name__)
