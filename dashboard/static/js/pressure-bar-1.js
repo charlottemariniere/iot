@@ -1,8 +1,8 @@
-var lineChartCanvas = document.getElementById('pressure')
+var barChartCanvas = document.getElementById('pressure')
 
-var lineData = { labels: ['Data'], datasets: [{ data: [36, 64], borderWidth: 2, borderAlign: 'inner', borderWidth: 2, borderAlign: 'inner', backgroundColor: ['rgba(192, 0, 0, 0.4)','rgba(64, 64, 192, 0.4)',], borderColor: ['rgba(192, 0, 0, 1)', 'rgba(64, 64, 192, 1)',],}],}
+var barData = { labels: ['Data'], datasets: [{ data: [123], borderWidth: 2, borderAlign: 'inner', backgroundColor: ['rgba(17, 138, 178, 0.5)',], borderColor: ['rgba(17, 138, 178, 1)',],}],}
 
 
-var lineOptions = {}
+var barOptions = {}
 
-var myLineChart = new Chart(lineChartCanvas, { type: 'line', data: lineData, options: lineOptions,})
+var myBarChart = new Chart(barChartCanvas, { type: 'bar', data: barData, options: barOptions,})

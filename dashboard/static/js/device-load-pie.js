@@ -2,7 +2,7 @@ var pieChartCanvas = document.getElementById('device-load')
 
 var pieData = {
     labels: ['CPU Use', 'Idle'],
-    datasets: [{ data: [36, 64], borderWidth: 2, borderAlign: 'inner', borderWidth: 2, borderAlign: 'inner', backgroundColor: ['rgba(192, 0, 0, 0.4)','rgba(64, 64, 192, 0.4)',], borderColor: ['rgba(192, 0, 0, 1)', 'rgba(64, 64, 192, 1)',],}],}
+    datasets: [{ data: [36, 64], borderWidth: 2, borderAlign: 'inner', borderWidth: 2, borderAlign: 'inner', backgroundColor: ['rgba(239, 71, 111, 0.5)','rgba(255, 209, 102, 0.5)',], borderColor: ['rgba(239, 71, 111, 1)','rgba(255, 209, 102, 1)',],}],}
 
 
 var pieOptions = {}

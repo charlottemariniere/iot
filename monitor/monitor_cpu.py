@@ -6,7 +6,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 # import the Model classes for CPU and Storage
-from db import CPU, Storage, Base
+from db import CPU, Storage, Base, Database
 
 # import the methods that will be used from the mypi file
 from mypi import \
@@ -58,6 +58,14 @@ def main(_delay):
               f'{last_readings.cpu_temp:>8.1f}|{last_readings.gpu_temp:>8.1f}|'
               f'{last_readings.load:>8.1f}'
               f'')
+
+        # Database
+        db = Database("cpu_loads.db")
+        db.create()
+
+        load = get_maximum_cpu_load()
+        db.store(load)
+        print(f'{datetime.now()} CPU load = {load}')
 
         sleep(_delay)
 
