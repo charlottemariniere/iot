@@ -58,7 +58,7 @@ class EnvironmentTPH(Base):
     create_at = Column(DateTime)
 
     def __init__(self):
-        self.device_name = "UNKNOWN"
+        self.device_name = "Name device unknown"
         self.device_mac = 'ZZ:ZZ:ZZ:ZZ:ZZ:ZZ'
         self.device_serial = "UNKNOWN"
         self.temperature = 60
