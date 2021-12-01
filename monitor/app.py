@@ -5,6 +5,7 @@ from flask_cors import CORS
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
+from monitor import current_cpu
 
 import random
 # import logging
@@ -56,9 +57,6 @@ def index():
 
     statuses = [cpu, storage, enviro]
     return render_template('index.html', statuses=statuses)
-
-
-
 
 
 @app.route('/about')
